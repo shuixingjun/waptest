@@ -1,6 +1,5 @@
 .logo {
 	width: 28%;
-	height: 132px;
 	margin: 22% auto 0;
 }
 .logo img {
@@ -25,4 +24,9 @@ label {
 	font-size: 2rem;
 	font-weight: 500;
 	text-align: center;
+}
+.go-pc {
+	display: block;
+	text-align: center;
+	font-size: 2rem;
 }
