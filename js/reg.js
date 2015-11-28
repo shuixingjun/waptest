@@ -18,7 +18,7 @@ $(function(){
                         ['regexp', /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/]
                         //['ajax', 'url', '']
                     ],
-                    text:['手机号码不正确','账号或密码不正确'],
+                    text:['手机号码不正确','该手机已被注册'],
                     right:'',
                     callback:function(){ 
                     }
@@ -31,15 +31,34 @@ $(function(){
                     ],
                     text:['6-16'],
                     callback:function(){}
-                }
-       	    }            
+                },
+                code:{
+                    type: ['required', '请输入验证码'],
+                     valid:[
+                        ['length', 6, 6]
+                    ],
+                    text:['6-16'],
+                    callback:function(){}
+                },
+                city:{
+                    type: ['required', '请选择城市'],
+                     valid:[
+                        ['required']
+                    ],
+                    text:['请选择城市'],
+                    callback:function(){}
+                },
+       	    }   
+
         $.validator.validEvent = {
          '#username': 'blur'  
        ,'#password': 'blur'
+       ,'#code': 'blur'
+       ,'#city': 'blur'
       };
 
-      $login_form = $.validator({
-        selector: '#login_form'
+      $reg_form = $.validator({
+        selector: '#reg_form'
         , normal: normal
         , right: normal       
         , wrong: wrong

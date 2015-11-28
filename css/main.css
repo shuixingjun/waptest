@@ -285,15 +285,16 @@ th {
 header{ 
   background: #009944;
   position: relative;
-  line-height: 4rem;
+  line-height: 52px;
+  height: 52px;
   padding:0 16px;
   color:#fff;
   overflow:hidden;
 }
 header h1{
-  line-height: 4rem;
+  line-height: 52px;
   color:#fff;
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-align: center;
   margin: 0;
   position: absolute;
@@ -360,10 +361,11 @@ input[type="text"]{
   border-radius: 3rem;
 }
 .error {
-    color: #D7E05C;
-    background: #5196B7;
+    display: none;
+    color: #F9A9A0;
+    background: #71ADCA;
     position: absolute;
-    left: 70%;
+    left: 62%;
     line-height: 2;
     padding: 3px 10px;
     top: 10px;
