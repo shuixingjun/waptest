@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE-edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0,user-scalable=no" name="viewport">
+	<link href="../css/bootstrap.min.css" rel="stylesheet"/>
+	<link href="../css/main.css" rel="stylesheet"/>
+	<link href="../css/basic.css" rel="stylesheet"/>
+	<script src="../js/jquery-1.9.1.min.js"></script>
+	<script src="../js/jquery.validator.js"></script>
+	<script src="../js/reg.js"></script>
+	<title>基本信息</title>
+</head>	
+<body> 
+	<header><span class="return"><</span><h1>基本信息</h1></header>
+	<form action="#" id="basic_form" >
+		<div class="container">
+			<div class="row mt-2">
+				<label for="name">姓名</label>
+				<input id="name" type="text" class="textfield col-xs-10 col-xs-offset-1" maxlength="11" data-validator="name">
+				<em class="error"></em>
+			</div>
+			<div class="row">
+				<label for="job">当前职务</label>
+				<input id="job" type="text" class="textfield col-xs-10 col-xs-offset-1" data-validator="job">
+				<em class="error"></em>
+			</div>
+			<div class="row">
+				<label for="birthday">出生日期</label>
+				<input id="birthday" type="password" class="textfield col-xs-10 col-xs-offset-1" data-validator="birthday">
+				<em class="error"></em>
+			</div>
+			<div class="row">
+				<i class="checked col-xs-offset-1">男</i>
+				<i>女</i>
+			</div>
+			<div class="row">
+				<label for="exp">工作年限</label>
+				<input id="exp" type="text" class="textfield col-xs-10 col-xs-offset-1" data-validator="exp">
+				<em class="error"></em>
+			</div>
+			<div class="row">
+				<label for="edu">最高学历</label>
+				<input id="edu" type="text" class="textfield col-xs-10 col-xs-offset-1" data-validator="edu">
+				<em class="error"></em>
+			</div>
+			<div class="row">
+				<label for="email">邮箱</label>
+				<input id="email" type="text" class="textfield col-xs-10 col-xs-offset-1" data-validator="email">
+				<em class="error"></em>
+			</div>
+			<div class="row mt-2">
+				<input type="submit"  id="submit_btn" value="完成" class="green_bg col-xs-10 col-xs-offset-1">
+			</div>
+		</div>
+	</form>	
+</body>
+</html>

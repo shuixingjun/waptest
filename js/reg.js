@@ -48,13 +48,67 @@ $(function(){
                     text:['请选择城市'],
                     callback:function(){}
                 },
+                 name: {
+                    type: ['required', '请输入姓名'],
+                    trim: true, 
+                    valid:[
+                        
+                    ],
+                    text:['请输入姓名'],
+                    right:'',
+                    callback:function(){ 
+                    }
+                },
+                job:{
+                    type: ['required', '请输入当前职务'],
+                     valid:[
+                    ],
+                    text:['请输入当前职务'],
+                    callback:function(){}
+                },
+                birthday:{
+                    type: ['required', '请输入birthday'],
+                     valid:[
+                    ],
+                    text:['请输入birthday'],
+                    callback:function(){}
+                },
+                exp:{
+                    type: ['required', '请选择exp'],
+                     valid:[
+                    ],
+                    text:['exp'],
+                    callback:function(){}
+                },
+                edu:{
+                    type: ['required', 'edu'],
+                     valid:[
+                    ],
+                    text:['edu'],
+                    callback:function(){}
+                },
+                email: {
+                type: ['required', '请填写邮箱'],
+                valid:[
+                     ['regexp', /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/]
+                ],
+                
+                text:['请填写有效邮箱'],
+                callback: function(){}
+             }
        	    }   
 
-        $.validator.validEvent = {
-         '#username': 'blur'  
+       $.validator.validEvent = {
+        '#username': 'blur'  
        ,'#password': 'blur'
        ,'#code': 'blur'
        ,'#city': 'blur'
+       ,'#name': 'blur'  
+       ,'#job': 'blur'
+       ,'#birthday': 'blur'
+       ,'#exp': 'blur'
+       ,'#edu': 'blur'
+       ,'#email': 'blur'
       };
 
       $reg_form = $.validator({
@@ -66,5 +120,30 @@ $(function(){
       event.preventDefault();
       	console.log(111);
           })
+
+      $('.row i').on('click',function(){
+        $(this).addClass('checked').siblings('i').removeClass('checked');
+      });
+      $('.row input').on('focusin', function(event) {
+      	event.preventDefault();
+      	$(this).siblings('label').hide();
+      });
+      $('.row input').on('focusout', function(event) {
+      	event.preventDefault();
+      	if (!$(this).val()) {
+      		$(this).siblings('label').fadeIn('fast');
+      	}
+      });
+
+
+      $basic_form = $.validator({
+        selector: '#basic_form'
+        , normal: normal
+        , right: normal       
+        , wrong: wrong
+        }).on('submit', function(event) {//登录
+      event.preventDefault();
+      	console.log(111);
+          }) 
 
 });
