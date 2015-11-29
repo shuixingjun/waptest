@@ -1,0 +1,81 @@
+.textfield {
+    display: block;
+    height: 58px;
+    line-height: 58px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    color: #666;
+    font-size: 18px;
+    text-align: left;
+    background: transparent
+}
+label {
+    position: absolute;
+    width: 100%;
+    margin-left: 12%;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: left;
+    line-height: 58px;
+}
+
+.return {
+	position: absolute;
+    font-size: 25px;
+    left: 4%;
+    top: 0px;
+}
+.row {
+	margin-top: 1rem;
+}
+/* .row.mt-2 {
+	margin-top: 2rem;
+} */
+.row i.checked {
+	color: #009944;
+}
+.row i {
+	display: inline-block;
+	font-style: normal;
+	padding-left: 10px;
+	margin-right: 20px;
+}
+.info {
+	font-size: 1.5rem;
+}
+.job {
+	font-size: 1.5rem;
+}
+.person-name {
+	margin: 0;
+	font-size: 20px;
+}
+h4 {
+	float: left;
+	width: 100%;
+	margin-bottom: 0;
+	padding: 0 1rem;
+	background: #E4FBFB;
+	line-height: 50px;
+	color: #009944;
+	font-size: 20px;
+}
+.line {
+    background: #009944;
+    line-height: 1rem;
+    width: 4px;
+    height: 1.3rem;
+    display: inline-block;
+    margin-right: 1rem;
+    margin-left: .5rem;
+}
+.desc_info {
+	font-size: 1.5rem;
+}
+#submit_btn {
+	line-height: 52px;
+	color: #fff;
+	font-size: 2rem;
+	border: none;
+	border-radius: 6px;
+}
