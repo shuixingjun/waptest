@@ -38,6 +38,17 @@ $(function(){
        ,'#password': 'blur'
       };
 
+       $('.row input').on('focusin', function(event) {
+        event.preventDefault();
+        $(this).siblings('label').hide();
+      });
+      $('.row input').on('focusout', function(event) {
+        event.preventDefault();
+        if (!$(this).val()) {
+          $(this).siblings('label').fadeIn('fast');
+        }
+      });
+
       $login_form = $.validator({
         selector: '#login_form'
         , normal: normal
