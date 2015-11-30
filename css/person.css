@@ -70,7 +70,41 @@ h4 {
     margin-left: .5rem;
 }
 .desc_info {
+	position: relative;
 	font-size: 1.5rem;
+}
+.divide {
+	border: 1px solid #eee;
+}
+.edit {
+	position: absolute;
+    right: 3rem;
+    top: 0;
+    margin-top: 3rem;
+    line-height: 100%;
+    color: #999;
+}
+.shu {
+	margin-right: 10px;
+	margin-left: 10px;
+}
+.me {
+	min-height: 60px;
+}
+.me .edit{
+	margin-top: .5rem;
+}
+#me_form {
+	float: left;
+}
+#me_form textarea {
+	display: none;	
+	border:none;
+}
+#me_form textarea:active,
+#me_form textarea:focus
+{
+	border:none;
 }
 #submit_btn {
 	line-height: 52px;
