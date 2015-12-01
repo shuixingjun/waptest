@@ -39,7 +39,8 @@ label {
     text-align: center;
     cursor: pointer;
 }
-#reg_btn {
+#reg_btn,
+#edu_btn {
 	line-height: 52px;
 	color: #fff;
 	font-size: 2rem;

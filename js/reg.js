@@ -88,14 +88,49 @@ $(function(){
                     callback:function(){}
                 },
                 email: {
-                type: ['required', '请填写邮箱'],
-                valid:[
-                     ['regexp', /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/]
-                ],
-                
-                text:['请填写有效邮箱'],
-                callback: function(){}
-             }
+                    type: ['required', '请填写邮箱'],
+                    valid:[
+                         ['regexp', /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/]
+                    ],
+                    
+                    text:['请填写有效邮箱'],
+                    callback: function(){}
+                },
+                major:{
+                    type: ['required', 'major'],
+                     valid:[
+                    ],
+                    text:['major'],
+                    callback:function(){}
+                },
+                school:{
+                    type: ['required', 'school'],
+                     valid:[
+                    ],
+                    text:['school'],
+                    callback:function(){}
+                },
+                degree:{
+                    type: ['required', 'degree'],
+                     valid:[
+                    ],
+                    text:['degree'],
+                    callback:function(){}
+                },  
+                start_time:{
+                    type: ['required', 'start_time'],
+                     valid:[
+                    ],
+                    text:['start_time'],
+                    callback:function(){}
+                },
+                end_time:{
+                    type: ['required', 'end_time'],
+                     valid:[
+                    ],
+                    text:['end_time'],
+                    callback:function(){}
+                }, 
        	    }   
 
        $.validator.validEvent = {
@@ -108,7 +143,11 @@ $(function(){
        ,'#birthday': 'blur'
        ,'#exp': 'blur'
        ,'#edu': 'blur'
-       ,'#email': 'blur'
+       ,'#school': 'blur'
+       ,'#degree': 'blur'
+       ,'#major': 'blur'
+       ,'#start_time': 'blur'
+       ,'#end_time': 'blur'
       };
 
       $reg_form = $.validator({
@@ -135,6 +174,15 @@ $(function(){
       	}
       });
 
+      $('.selfverse').on('click',function(){ //自我评价
+          $(this).fadeOut('fast');
+          $(this).siblings('p').hide().siblings('#me_form').show();
+      })
+      $('.cancel').on('click',function(){ //自我评价
+          var $desc_info =  $(this).parents('.desc_info')
+          $desc_info.find('p').fadeIn('fast').siblings('.selfverse').show();
+          $desc_info.find('#me_form').hide();
+      })
 
       $basic_form = $.validator({
         selector: '#basic_form'
@@ -145,5 +193,15 @@ $(function(){
       event.preventDefault();
       	console.log(111);
           }) 
+
+       $edu_form = $.validator({
+        selector: '#edu_form'
+        , normal: normal
+        , right: normal       
+        , wrong: wrong
+        }).on('submit', function(event) {//登录
+      event.preventDefault();
+        console.log(111);
+          })   
 
 });

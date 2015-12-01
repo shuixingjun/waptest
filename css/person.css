@@ -88,18 +88,19 @@ h4 {
 	margin-right: 10px;
 	margin-left: 10px;
 }
-.me {
+/* .me {
 	min-height: 60px;
-}
+} */
 .me .edit{
 	margin-top: .5rem;
 }
 #me_form {
 	float: left;
+	display: none;		
 }
 #me_form textarea {
-	display: none;	
-	border:none;
+    min-height: 5rem;	
+	border:1px solid #ccc;
 }
 #me_form textarea:active,
 #me_form textarea:focus
@@ -112,4 +113,17 @@ h4 {
 	font-size: 2rem;
 	border: none;
 	border-radius: 6px;
+}
+.green_bg  {
+	color: #fff;
+    line-height: 3rem;
+    height: 3rem;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    border: 0;
+}
+.info_link {
+	display: block;
+	width: 100%;
+	text-align: center;
 }
