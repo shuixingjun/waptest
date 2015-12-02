@@ -40,10 +40,21 @@ label {
     cursor: pointer;
 }
 #reg_btn,
-#edu_btn {
+#edu_btn,
+#exp_btn {
 	line-height: 52px;
 	color: #fff;
 	font-size: 2rem;
 	border: none;
 	border-radius: 6px;
+}
+
+#jobdesc {
+    border: 1px solid #ccc;
+    min-height: 100px;
+    border-radius: 6px;
+    color: #666;
+    font-size: 18px;
+    text-align: left;
+    background: transparent;
 }

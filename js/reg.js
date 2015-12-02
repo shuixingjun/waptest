@@ -131,6 +131,20 @@ $(function(){
                     text:['end_time'],
                     callback:function(){}
                 }, 
+                company:{
+                    type: ['required', 'company'],
+                     valid:[
+                    ],
+                    text:['company'],
+                    callback:function(){}
+                }, 
+                jobdesc:{
+                    type: ['required', 'jobdesc'],
+                     valid:[
+                    ],
+                    text:['jobdesc'],
+                    callback:function(){}
+                }, 
        	    }   
 
        $.validator.validEvent = {
@@ -163,11 +177,11 @@ $(function(){
       $('.row i').on('click',function(){
         $(this).addClass('checked').siblings('i').removeClass('checked');
       });
-      $('.row input').on('focusin', function(event) {
+      $('.row input,textarea').on('focusin', function(event) {
       	event.preventDefault();
       	$(this).siblings('label').hide();
       });
-      $('.row input').on('focusout', function(event) {
+      $('.row input,.row textarea').on('focusout', function(event) {
       	event.preventDefault();
       	if (!$(this).val()) {
       		$(this).siblings('label').fadeIn('fast');
@@ -204,4 +218,13 @@ $(function(){
         console.log(111);
           })   
 
+        $exp_form = $.validator({
+        selector: '#exp_form'
+        , normal: normal
+        , right: normal       
+        , wrong: wrong
+        }).on('submit', function(event) {//登录
+      event.preventDefault();
+        console.log(111);
+          })   
 });

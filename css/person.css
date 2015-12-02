@@ -71,6 +71,7 @@ h4 {
 }
 .desc_info {
 	position: relative;
+	min-height: 50px;
 	font-size: 1.5rem;
 }
 .divide {
@@ -126,4 +127,35 @@ h4 {
 	display: block;
 	width: 100%;
 	text-align: center;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    height: 52px;
+    line-height: 52px;
+	text-align: center;
+    color: #fff;
+    font-size: 2rem;
+	background: #009944;
+}
+.header-top {
+	top: 0;
+	left: 0;
+}
+.footer .reset {
+	background: #E4FBFB;
+}
+.footer .reset a {
+	color: #009944;
+}
+.footer .col-xs-6 {
+	padding: 0;
+}
+
+.cos-type {
+    padding: 2px 8px;	
+	background: #009944;
+	color: #fff;
 }
