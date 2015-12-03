@@ -24,6 +24,7 @@ label {
     font-size: 25px;
     left: 4%;
     top: 0px;
+    color: #fff;
 }
 .row {
 	margin-top: 1rem;
@@ -157,5 +158,8 @@ h4 {
 .cos-type {
     padding: 2px 8px;	
 	background: #009944;
+	color: #fff;
+}
+.ecode {
 	color: #fff;
 }

@@ -24,6 +24,7 @@ label {
     font-size: 25px;
     left: 4%;
     top: 0px;
+    color: #fff;
 }
 .row {
 	margin-top: 1rem;
@@ -32,12 +33,21 @@ label {
 	margin-top: 2rem;
 }
 #getCode {
+    padding: 0 10px;
     background: #eee;
+    border:0 none;
     border-radius: 6px;
     line-height: 58px;
     font-size: 15px;
     text-align: center;
     cursor: pointer;
+}
+#getCode.active {
+    background: #009944;
+    color: #fff;  
+}
+#getCode:focus {
+    border:0 none;
 }
 #reg_btn,
 #edu_btn,

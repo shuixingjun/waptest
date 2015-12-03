@@ -12,7 +12,7 @@ $(function(){
 
      $.validator.validType = {
                 username: {
-                    type: ['required', '请输入手机号'],
+                    type: ['required', '手机号码不正确'],
                     trim: true, 
                     valid:[
                         ['regexp', /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/]
@@ -21,11 +21,11 @@ $(function(){
                     text:['手机号码不正确','该手机已被注册'],
                     right:'',
                     callback:function(){ 
+                      $getCode.addClass('active').prop('disabled',false);
                     }
                 },
                 password:{
                     type: ['required', '请输入密码'],
-                    focus: '请输入密码',
                      valid:[
                         ['length', 6, 16]
                     ],
@@ -37,7 +37,7 @@ $(function(){
                      valid:[
                         ['length', 6, 6]
                     ],
-                    text:['6-16'],
+                    text:['6'],
                     callback:function(){}
                 },
                 city:{
@@ -172,7 +172,7 @@ $(function(){
         }).on('submit', function(event) {//登录
       event.preventDefault();
       	console.log(111);
-          })
+          }) 
 
       $('.row i').on('click',function(){
         $(this).addClass('checked').siblings('i').removeClass('checked');
@@ -186,6 +186,16 @@ $(function(){
       	if (!$(this).val()) {
       		$(this).siblings('label').fadeIn('fast');
       	}
+      });
+
+
+      var time =5
+      ,$getCode = $('#getCode') 
+      ;
+
+      $getCode.on('click',function(){
+          settime($(this));
+          //ajax
       });
 
       $('.selfverse').on('click',function(){ //自我评价
@@ -213,7 +223,7 @@ $(function(){
         , normal: normal
         , right: normal       
         , wrong: wrong
-        }).on('submit', function(event) {//登录
+        }).on('submit', function() {//登录
       event.preventDefault();
         console.log(111);
           })   
@@ -227,4 +237,19 @@ $(function(){
       event.preventDefault();
         console.log(111);
           })   
+
+
+        function settime(obj) {
+          if (time == 0) {
+            obj.prop("disabled",false).addClass('active').val('发送验证码');
+            time = 5;
+            return false;
+          } else {
+            obj.prop("disabled",true).removeClass('active').val('还有' + time + '秒剩余');
+            time--;
+          }
+          setTimeout(function() {
+            settime(obj)
+          },1000)
+        }
 });
