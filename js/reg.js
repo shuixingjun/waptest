@@ -7,6 +7,11 @@ $(function(){
       , wrong = function(text){
         this.nextAll('.error').html(text).show();
       }
+      ,time =5
+      ,$getCode = $('#getCode') 
+     // ,validA = function ys() {}
+    // ,t = false;
+      ;
  
 
 
@@ -21,8 +26,9 @@ $(function(){
                     text:['手机号码不正确','该手机已被注册'],
                     right:'',
                     callback:function(){ 
-                      $getCode.addClass('active').prop('disabled',false);
-                    }
+                     // t = true;
+                      //$getCode.addClass('active').prop('disabled',false);
+                         }
                 },
                 password:{
                     type: ['required', '请输入密码'],
@@ -189,9 +195,6 @@ $(function(){
       });
 
 
-      var time =5
-      ,$getCode = $('#getCode') 
-      ;
 
       $getCode.on('click',function(){
           settime($(this));

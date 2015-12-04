@@ -1,0 +1,58 @@
+.return {
+	position: absolute;
+    font-size: 25px;
+    left: 4%;
+    top: 0px;
+    color: #fff;
+}
+.pr {
+	float: right;
+}
+.pr input {
+    display: block;	
+	font-size: 18px;
+    color: #fff;
+    background: transparent;
+    border: 0;
+    line-height: 52px;
+}
+.indexes {
+	position: fixed;
+	right: 1rem;
+	bottom: 1rem;
+	padding: 5px;
+	border-radius: 10px;
+	background: #ddd;
+}
+.indexes li {
+	display: block;
+	text-align: center;
+}
+h4 {
+	margin: 0;
+    padding-left: 10px;
+	color: #809AB1;
+    background: #D5FDB2;
+    line-height: 40px;	
+}
+#hotCity {
+	padding-left: 0px;
+	padding-right: 0px;
+	margin: 0;
+}
+#hotCity li,
+#cityUl li {
+	line-height: 30px;
+    padding: 0 10px;
+    margin: 5px 5px 5px 0;
+    border-radius: 10px;
+}
+#hotCity .green,
+#cityUl .green {
+    color: #fff;    
+    background: #3BCC33;
+}
+#cityUl {
+	padding: 0;
+	margin: 0;
+}
