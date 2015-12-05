@@ -7,6 +7,7 @@
 }
 .pr {
 	float: right;
+	margin-right: 1rem;
 }
 .pr input {
     display: block;	
@@ -18,8 +19,8 @@
 }
 .indexes {
 	position: fixed;
-	right: 1rem;
-	bottom: 1rem;
+	right: .5rem;
+	bottom: 2rem;
 	padding: 5px;
 	border-radius: 10px;
 	background: #ddd;
@@ -27,6 +28,7 @@
 .indexes li {
 	display: block;
 	text-align: center;
+	font-size: 13px;
 }
 h4 {
 	margin: 0;
@@ -55,4 +57,7 @@ h4 {
 #cityUl {
 	padding: 0;
 	margin: 0;
+}
+input:focus{
+	border:0;
 }
