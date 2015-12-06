@@ -46,5 +46,30 @@
 			</div>
 		</div>
 	</form>	
+	<link href="../css/UIPickerView.css" rel="stylesheet"/>	
+	<div class="region-picker-wrapper visibility-control" id="region-picker">
+	    <div class="header">
+        	<div class="bar bar-header">
+          		<button type="button" class="button button-clear" id="selectClose">关闭</button>
+          		<div class="h3 title">选择时间</div>
+          		<button type="button" class="button button-clear button-positive" id="selectYes">确定</button>
+        	</div>
+     	</div>
+	    <div class="body">
+	        <div class="select-zone top"></div>
+	        <div class="select-zone middle"></div>
+	        <div class="select-zone bottom"></div>
+	        <div class="region-picker" >
+	          	<div id="provincePicker"></div>
+	        </div>
+	        <div class="region-picker">
+	          	<div id="cityPicker"></div>
+	        </div>
+	        <div class="region-picker">
+	          	<div id="areaPicker"></div>
+	        </div>
+	    </div>
+    </div>
+<script src="../js/UIPickerView.js"></script> 
 </body>
 </html>
