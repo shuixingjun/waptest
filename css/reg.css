@@ -21,10 +21,11 @@ label {
 
 .return {
 	position: absolute;
-    font-size: 25px;
     left: 4%;
     top: 0px;
+    z-index: 100;
     color: #fff;
+    font-size: 25px;
 }
 .row {
 	margin-top: 1rem;
@@ -67,4 +68,23 @@ label {
     font-size: 18px;
     text-align: left;
     background: transparent;
+}
+
+#city_form {
+    position: absolute;
+    top: 0;
+    background: #fff;
+    left: 400px;
+}
+.indexes {
+    display: none;
+}
+#city_form header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+#city_form .container {
+    margin-top: 40px;
 }

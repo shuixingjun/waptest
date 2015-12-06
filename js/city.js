@@ -2051,7 +2051,6 @@ var letterJson = {"A":[],"B":[],"C":[],"D":[],"E":[],"F":[],"G":[],"H":[],"J":[]
 		},{id: '174', name: '深圳'
 		},{id: '984', name: '成都'
 		},{id: '297', name: '杭州'
-		},{id: '659', name: '全国'
 		}, {id:'210', name: '武汉'
 		}, {id:'789', name: '大连'
 		}, {id:'773', name: '沈阳'
@@ -2101,7 +2100,12 @@ var letterJson = {"A":[],"B":[],"C":[],"D":[],"E":[],"F":[],"G":[],"H":[],"J":[]
 		e.preventDefault();
 		if($('.container li').hasClass('green')){
 			//ajax
-			alert(1)
+			$('#city').val($('.green').text()).trigger('focus');
+			$('#city_form').animate({
+	          left: 500},
+	          1000, function() {
+	            $('.indexes').hide();
+       		 });
 		}else {
 			alert('?');
 		}

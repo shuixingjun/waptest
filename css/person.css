@@ -76,7 +76,7 @@ h4 {
 	font-size: 1.5rem;
 }
 .divide {
-	border: 1px solid #eee;
+	border-bottom: 1px solid #eee;
 }
 .edit {
 	position: absolute;

@@ -30,7 +30,7 @@
 	text-align: center;
 	font-size: 13px;
 }
-h4 {
+#city_form h4 {
 	margin: 0;
     padding-left: 10px;
 	color: #809AB1;
@@ -58,6 +58,6 @@ h4 {
 	padding: 0;
 	margin: 0;
 }
-input:focus{
+#city_form input:focus{
 	border:0;
 }

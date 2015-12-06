@@ -133,8 +133,9 @@ $(function(){
                 end_time:{
                     type: ['required', 'end_time'],
                      valid:[
+                          ['timevalid'],
                     ],
-                    text:['end_time'],
+                    text:['end_time1'],
                     callback:function(){}
                 }, 
                 company:{
@@ -170,12 +171,24 @@ $(function(){
        ,'#end_time': 'blur'
       };
 
+
+
+      $.validator.validMethods.timevalid = function (){
+        var rs = false;
+        if (!$(this).parents('.container').find('#start_time').val()) {
+           rs = false;
+        }else {
+           rs = true;
+        }
+        return rs;
+      }
+
       $reg_form = $.validator({
         selector: '#reg_form'
         , normal: normal
         , right: normal       
         , wrong: wrong
-        }).on('submit', function(event) {//登录
+        }).on('submit', function(event) {
       event.preventDefault();
       	console.log(111);
           }) 
@@ -195,6 +208,20 @@ $(function(){
       });
 
 
+      $('#city').on('click',function() {
+        $('#city_form').animate({
+          left: 0},
+          1000, function() {
+            $('.indexes').show();
+        });
+      }) 
+      $('#city_form .return').on('click',function() {
+        $('#city_form').animate({
+          left: 500},
+          1000, function() {
+            $('.indexes').hide();
+        });
+      })
 
       $getCode.on('click',function(){
           settime($(this));
@@ -216,7 +243,7 @@ $(function(){
         , normal: normal
         , right: normal       
         , wrong: wrong
-        }).on('submit', function(event) {//登录
+        }).on('submit', function(event) {
       event.preventDefault();
       	console.log(111);
           }) 
@@ -226,7 +253,7 @@ $(function(){
         , normal: normal
         , right: normal       
         , wrong: wrong
-        }).on('submit', function() {//登录
+        }).on('submit', function() {
       event.preventDefault();
         console.log(111);
           })   
@@ -236,7 +263,7 @@ $(function(){
         , normal: normal
         , right: normal       
         , wrong: wrong
-        }).on('submit', function(event) {//登录
+        }).on('submit', function(event) {
       event.preventDefault();
         console.log(111);
           })   
