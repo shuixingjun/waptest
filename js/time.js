@@ -10,6 +10,10 @@ $(function (){
         var selectYes = document.getElementById('selectYes');
         var selectClose = document.getElementById('selectClose');
         var data = [
+       		 {
+                "key":"00",
+                "value":"zhj"
+            },
             {
                 "key":"01",
                 "value":"1986"
@@ -112,13 +116,25 @@ $(function (){
             }
             dateTime = year+"-"+month;
             console.log(dateTime)
-                if(time == "begin"){
+
+            if (year == 'zhj') {
+            	if(time == "begin"){
+                    $("#start_time").val(year).trigger('datepick');
+                    $("#start_time").trigger('focus');
+                }else{
+                    $("#end_time").val(year).trigger('datepick');
+                    $("#end_time").trigger('focus');
+                }
+            }else{
+            	if(time == "begin"){
                     $("#start_time").val(dateTime).trigger('datepick');
                     $("#start_time").trigger('focus');
                 }else{
                     $("#end_time").val(dateTime).trigger('datepick');
                     $("#end_time").trigger('focus');
                 }
+            }
+                
             // if (!up2Data&& up1) {
             //  up1.UPSelectRowIndexPath(1).UPThen(function(indexPath,value){
             //      console.log(value);
@@ -132,6 +148,7 @@ $(function (){
         });
         pickerCreate.addEventListener('click',function(){
             !up && (up = UIPickerView.createPickerView({
+           // 	var data2= data.splice(1,1)
                 dataSource:data,
                 id:'provincePicker',
                 constraintsId:'wower',
