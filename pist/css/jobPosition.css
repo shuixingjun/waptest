@@ -1,0 +1,260 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "Microsoft Yahei";
+}
+
+
+.job {
+    margin: 120px;
+	width: 300px;
+    height: 50px;
+    background: #cc3;
+    color: #fff;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.jobWrap {
+    display: none;
+	position: relative;
+    top: -145px;
+    left: 120px;
+	width: 800px;
+    height: 500px;	
+	border: 1px solid #ccc;
+}
+.jobWrap h2 {
+    padding-left: 20px;
+    height: 35px;
+	font-size: 18px;
+    background: #ddd;
+    line-height: 35px;
+    color: #666;
+    border-bottom: 1px solid #ccc;
+}
+.jobHeader {
+    overflow: hidden;
+    padding: 10px 30px 0;
+    height: 35px;
+    background: #F7F7F4;
+    color: #666;
+    font-size: 14px;
+}
+.jobControl {
+	padding: 0 30px;
+    height: 30px;
+    background: #F7F7F4;
+    color: #666;
+    font-size: 14px;
+    border-bottom: 1px solid #eaeaea;
+}
+.control {
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    margin-right: 12px;
+    padding: 0 20px;
+    color: #555;
+    border: 1px solid #eaeaea;
+    border-radius: 3px;
+    border-bottom: 0;
+    line-height: 30px;
+    font-size: 13px;
+}
+.jobContent {
+	overflow: hidden;
+    height: 360px;
+    background: #fff;
+}
+.common
+,.profession {
+    position: relative;
+    border-top: 1px solid #efefef;
+    margin: 32px 28px 0;
+    padding-top: 33px;
+    text-align: center;	
+}
+h3 {
+	position: absolute;
+    top: -11px;
+    background: #fff;
+    padding: 0 10px;
+    margin-left: -40px;
+    left: 50%;	
+    font-size: 14px;
+}
+.trade {
+	display: inline-block;
+	position: relative;
+	height: 28px;
+	width: auto;
+	padding: 0 15px;
+	background: #fff;
+    color: #3671cf;
+    line-height: 28px;
+    border: 1px solid transparent;
+    font-size: 12px;
+    cursor: pointer;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;    
+}
+.trade.active {
+	border: 1px solid #3671cf;
+	border-bottom: 0;
+	border-radius: 5px 5px 0 0;
+	z-index: 120;
+}
+.btn {
+	display: inline-block;
+	overflow: visible;
+	vertical-align: middle;
+	outline: none;
+	width: 60px;
+	margin: 15px 5px;
+	background: #3671cf;
+	border: 0 none;
+	border-radius: 5px;
+	color: #fff;
+	font-size: 12px;
+	line-height: 30px;
+	text-align: center;
+}
+.jobSelectBtn {
+    background: #ddd;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+#cancelBtn {
+	background: #999;
+}
+.commonBox {
+	display: none;
+	position: absolute;
+    z-index: 100;
+    top: 205px;
+    left: 28px;
+    height: 190px;
+    width: 700px;
+    padding: 10px 20px;
+    border: 1px solid #3671cf;
+    border-radius: 10px;
+    background: #fff;
+}
+.tradeJob,
+.proTrade,
+.selectDetail,
+.selectTag {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 14px;
+    color: #3671cf;
+    line-height: 1.6;
+    cursor: pointer;
+}
+.tradeJob.active,
+.proTrade.active,
+.selectDetail.active {
+    padding: 0 5px;    
+	background: #3671cf;
+	color: #fff;
+    border-radius: 3px;
+}
+.cursor {
+	cursor: pointer;
+}
+.professBox {
+	display: none;
+	position: absolute;
+    top: 125px;
+    left: 28px;
+    right: 28px;
+    height: 193px;
+    border-top: 1px solid #efefef;
+    padding: 15px 29px;
+    background: #fff;
+}
+.selectTag {
+    font-size: 12px;
+}
+.professDetail {
+    display: none;
+    padding: 15px 30px;
+    overflow: hidden;
+}
+#tagList {
+    float: left;
+    width: 130px;
+    text-align: center;
+}
+.selectTag {
+    width: 100%;
+    line-height: 26px;
+    border: 1px solid transparent;
+}
+.selectTag.active {
+    border: 1px solid #3671cf;
+    border-right-color: #fff;
+}
+.detailList {
+    margin-left: 131px;
+    padding-left: 30px;
+    line-height: 30px;
+    width: 550px;
+    height: 306px;
+    border: 1px solid #3671cf;
+}
+ul {
+    list-style-type: none;
+}
+.selectTag:hover {
+    background: green;
+    color: #fff;
+    width: 131px;
+}
+.selectTag.active:hover {
+    background: #fff;
+    color: #3671cf;
+}
+.selectDetail {
+    display: inline-block;
+}
+.jobHeader p {
+    display: inline-block;
+    float: left;
+    margin-right: 15px;
+    line-height: 25px;
+}
+.jobHeader .headerTag {
+    position: relative;
+    display: inline-block;
+    background: #3671cf;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    padding: 2px 8px;
+    max-width: 88px;
+    line-height: 25px;
+    border-radius: 5px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.headerTaglist {
+    float: left;
+}
+.del {    
+    position: absolute;
+    right: 2px;
+    bottom: 2px;
+    font-size: 16px;
+
+}
